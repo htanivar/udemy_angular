@@ -10,3 +10,9 @@ export class ProductService {
 
   constructor(private httpClient: HttpClient) { }
 }
+
+interface GetResponse{
+  _embedded:{
+    products: Product[];
+  }
+}
