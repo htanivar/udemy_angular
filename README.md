@@ -7,3 +7,5 @@ get bootstrap
 ng generate component <component name>
 ng generate class common/product
 ng generate service services/product
+
+npm install bootstrap
