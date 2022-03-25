@@ -9,4 +9,6 @@ ng generate class common/product
 ng generate service services/product
 npm install bootstrap
 ng generate class common/product-category
+ng generate component components/product-category-menu
+
 
