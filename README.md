@@ -11,4 +11,5 @@ npm install bootstrap
 ng generate class common/product-category
 ng generate component components/product-category-menu
 ng generate component components/search
+ng generate component components/product-details
 
