@@ -11,7 +11,7 @@ export class ProductService {
 
   // private baseUrl = 'http://localhost:8080/api/products';
   private baseUrl = 'http://devnath.ddns.net:2230/api/products';
-  private productCategoryUrl = 'http://devnath.ddns.net:2230/api/products-category';
+  private productCategoryUrl = 'http://devnath.ddns.net:2230/api/productCategories';
 
   constructor(private httpClient: HttpClient) {
   }
@@ -25,10 +25,11 @@ export class ProductService {
     );
   }
 
+
   getProductCategories(): Observable<ProductCategory[]>{
     return this.httpClient.get<GetResponseProductCategory>(this.productCategoryUrl).pipe(
-      map(response => response._embedded.productCategory)
-    );
+      map(response => response._embedded.productCategories)
+    )
   }
 }
 
@@ -40,6 +41,6 @@ interface GetResponseProduct {
 
 interface GetResponseProductCategory {
   _embedded: {
-    productCategory: ProductCategory[];
+    productCategories: ProductCategory[];
   }
 }
