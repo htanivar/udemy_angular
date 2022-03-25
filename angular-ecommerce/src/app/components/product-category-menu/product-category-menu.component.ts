@@ -19,6 +19,11 @@ export class ProductCategoryMenuComponent implements OnInit {
   }
 
   listProductCategories() {
-    throw new Error("Method not implemented");
+    this.productCategories.getProductCategories.subscribe(
+      data => {
+        console.log('Product Categories : ' + JSON.stringify(data))
+        this.productCategories = data;
+      }
+    )
   }
 }
